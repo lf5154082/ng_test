@@ -1,0 +1,75 @@
+<div id="wrapper">
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ><strong>&nbsp; &nbsp; FireRadar</strong></a>
+        </div>
+        <div class="dropdown user_look">
+            <button style="border: none" class="hello btn btn-default dropdown-toggle"  id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                &nbsp;快速查看 &nbsp;
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                <li><a  ng-click="jump('/xRule')">欺诈规则</a></li>
+                <li><a href="#/xRM">欺诈模板</a></li>
+            </ul>
+        </div>
+        <div class="dropdown user">
+
+            <a  class=" fa fa-user hello btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            {{user}}
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li ><a class="fa fa-desktop ">&nbsp; 用户中心</a></li>
+                <li ><a class="fa fa-lightbulb-o">&nbsp; 我的账号</a></li>
+                <li ><a class="fa fa-keyboard-o">&nbsp; 密码修改</a></li>
+                <li ><a class="fa fa-camera">&nbsp; 个性头像</a></li>
+                <li ><a class="fa fa-tags">&nbsp; 访问记录</a></li>
+            </ul>
+            <button ng-click="jump('/xStart')" style="border:none; outline: none" type="button" class="btn btn-default btn-sm fa fa-chevron-left">&nbsp; 退出</button>
+        </div>
+    </nav>
+    <!--/. NAV TOP  -->
+    <nav class="navbar-default navbar-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="main-menu" >
+                <li ng-click="jump('/xIndex')">
+                    <a data-toggle="collapse" data-parent="#main-menu">
+                        <i class="fa fa-sitemap"></i> 开始
+                    </a>
+                </li>
+                <li class="search">
+                    <a ng-click="show=!show" type="button"><i class="fa fa-search "></i>搜索</a>
+                </li>
+                <li class="search" ng-if="show">
+                    <input  type="text" placeholder="搜索">
+                </li>
+                <li  ng-click="jump('/xConsole')">
+                    <a type="button" ><i class="fa fa-dashboard"></i>总控台</a>
+                </li>
+                <li ng-click="jump('/xRule')">
+                    <a type="button" ><i class="fa fa-archive"></i>规则仓库</a>
+                </li>
+                <li >
+                    <a ng-click="hide=!hide" type="button" ><i class="fa fa-shield"></i>欺诈规则</a>
+                    <ul ng-if="hide">
+                        <li ng-click="jump('/xRM')" style="margin-bottom: 1rem"><a class="fa fa-hand-o-right">&nbsp;欺诈模板</a></li>
+                    </ul>
+                </li>
+                <li ng-click="jump('/xJob')">
+                    <a type="button" ><i class="fa fa-book"></i>工作流</a>
+                </li>
+                <li ng-click="jump('/xBlack')">
+                    <a type="button" ><i class="fa fa-file-text"></i>黑名单管理</a>
+                </li>
+                <li ng-click="jump('/xSys')">
+                    <a type="button" ><i class="fa fa-bookmark"></i>系统管理</a>
+                </li>
+                <li ng-click="jump('/xHelp')">
+                    <a type="button" ><i class="fa fa-user"></i>帮助</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+</div>

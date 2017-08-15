@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="form-wrapper" style="z-index: 1000">
+        <form name="myForm" id="login" class="form-signin  wow fadeInUp ">
+            <h1 class="form-signin-heading text-center mb">xAdmin</h1>
+            <h2 class="form-signin-heading text-center mb1">Welcome back</h2>
+            <div class="login-wrap clear" style="height: 250px;">
+                <div class="input-group mb2">
+                    <label class="input-group-addon mb3">账号</label>
+                    <input ng-model="username" required    type="text" id="l_name" name="l_name" class="form-control mb3" placeholder="请输入账号" autofocus>
+                </div>
+                <div class="input-group mb2">
+                    <label class="input-group-addon mb3">密码</label>
+                    <input ng-model="password"  required   type="password" id="l_pwd" name="l_pwd" class="form-control mb3 " placeholder="请输入密码">
+                </div>
+                <button id="l_btn" class="btn btn-default btn-block mb4" type="submit" ng-click="login()" ng-disabled="myForm.$invalid">登&nbsp;&nbsp;录</button>
+                <h5 class="text-center mb5">© 金火眼（北京）科技有限公司 </h5>
+            </div>
+        </form>
+    </div>
+</div>

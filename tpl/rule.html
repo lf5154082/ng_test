@@ -1,0 +1,71 @@
+<!--页头-->
+<div ng-include="'tpl/include/main.html'">
+</div>
+<div id="page-wrapper">
+    <div class="rules">
+        <div class="container-fluid">
+            <div class="row">
+              <h4 class="col-md-12">欺诈规则库</h4>
+              <div class="col-md-12">
+                  <div  class="rule_table row">
+                      <div style="font-size: 1.3rem; padding:2rem" class="col-md-6">
+                          观察：
+                          <input ng-model="isActiveRadio"  id="optionsRadios1"  type="radio" name="ch" value="1"/>按照用户触发频率排序
+                          <input ng-model="isActiveRadio" id="optionsRadios2" type="radio" name="ch" value="2"/>按照组件展示
+
+                          <div style="display: inline-block;margin-left: 1rem" class="dropdown">
+                              <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                  创建
+                                  <span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                  <li ><a class="fa fa-plus" href="#">&nbsp;创建组</a></li>
+                                  <li ><a class="fa fa-plus" href="#">&nbsp;创建新的欺诈规则</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div style="font-size: 1.3rem; padding:2rem" class="col-md-6">
+                          <label for="chk1" class="checkbox-inline">
+                              <input type="checkbox" id="chk1" value="option1"/>
+                              显示规则模板
+                          </label>
+                          <label for="chk2" class="checkbox-inline">
+                              <input type="checkbox" id="chk2" value="option2"/>
+                              显示隐藏模板
+                          </label>
+                          <label for="chk3" class="checkbox-inline">
+                              <input type="checkbox" id="chk3" value="option3"/>
+                              显示使用统计数据
+                          </label>
+                      </div>
+                      <table ng-if="isActiveRadio=='1'"    class="table table-bordered table-hover">
+                          <thead>
+                            <tr>
+                                <th>启用</th>
+                                <th>欺诈规则</th>
+                                <th>类型</th>
+                                <th>是否组合</th>
+                                <th>生成与否/风险值</th>
+                                <th>创建</th>
+                                <th>更新</th>
+                                <th>相关模板</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                      </table>
+                      <table  ng-if="isActiveRadio=='2'"   class="table table-bordered table-hover">
+                          <thead>
+                          <tr>
+                              <th>组名</th>
+                              <th>欺诈规则</th>
+                              <th>描述</th>
+                          </tr>
+                          </thead>
+                          <tbody></tbody>
+                      </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

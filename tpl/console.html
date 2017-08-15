@@ -1,0 +1,60 @@
+<!--页头-->
+<div ng-include="'tpl/include/main.html'">
+</div>
+<div id="page-wrapper">
+    <div class="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-right">
+                        <button type="button"  class="btn btn-sm btn-warning">停止</button>
+                        <button type="button"  class="btn btn-sm btn-success">刷新</button>
+                        <button type="button"  class="btn btn-sm btn-primary">重启</button>
+                    </p>
+                </div>
+                <div  class="computer col-md-4" style="padding-left: 7rem;">
+                    <p>管理员:</p>
+                    <p style="padding-left: 6rem">
+                        <img src="img/computer.png">
+                    </p>
+                </div>
+                <div  class="col-md-4 center">
+                    <ul>
+                        <li>注册用户数: <span></span></li>
+                        <li>欺诈用户数: <span></span></li>
+                        <li>前三个高风险地区:<span></span></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 center">
+                    <ul>
+                        <li style="color: #4E9A4E">状态： <span class="fa fa-circle"></span></li>
+                        <li style="color: #666">网络类型：<span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+         <div class="container-fluid">
+             <div class="row">
+                 <p class="col-md-4">监控信息</p>
+                 <p class="col-md-4">选择风险：
+                     <select  name="" id="s1">
+                         <option value=""></option>
+                         <option value=""></option>
+                         <option value=""></option>
+                     </select>
+                 </p>
+                 <p class="col-md-4">查询时间范围：
+                     <select  name="" id="s2" data-role="none">
+                         <option value="">当天</option>
+                         <option value="">本周</option>
+                         <option value="">本月</option>
+                         <option value="">上周</option>
+                         <option value="">上月</option>
+                     </select>
+                 </p>
+             </div>
+         </div>
+    </div>
+</div>
